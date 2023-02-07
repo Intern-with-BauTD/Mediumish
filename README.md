@@ -17,8 +17,18 @@ Created: February 3, 2023 9:39 AM
 # 2. Redux:
     1. Tên function của redux bắt đầu bằng action.
     2. Luôn có action CLEAR_GET_DATA cho task api, sử dụng khi thoát component.
+		3. Payload của Redux khi gửi lên sẽ có dạng:
+		```javascript
+		actionXXX({
+			value: { x, y, z },
+			successCallback,
+			failureCallback,
+			finallyCallback,
+		})
+		```
 
 # 3. SCSS:
+		Dụ án sử dụng 2 dạng style CSS, 1 là bootstrap, 2 là SCSS Module. Rule SCSS Module:
     1. Sử dụng module SCSS.
     2. Global chỉ được phép dùng trong các trường hợp:
         1. Custom class của npm package.
@@ -29,10 +39,18 @@ Created: February 3, 2023 9:39 AM
 # 4. Functions:
     
     ```jsx
-    function action(vals = {}, options = {}) {
-    	const { x, y } = vals;
+    function action(values = {}, options = {}) {
+    	const { x, y } = values;
     	const { isShowWarning, isXXX } = options;
     	...
     	return { value }
     }
     ```
+
+# 5. Git:
+
+		Commit trong git phải có ý nghĩa về những task đã được làm, không được commit chung, tối nghĩa.
+		Commit phải có dạng:
+		
+		1. Task: `git commit -m "task: Do xxx"`
+		2. Issue: `git commit -m "issue: Fix xxx"`
