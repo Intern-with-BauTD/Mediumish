@@ -1,0 +1,22 @@
+.Component {
+  background-color: red;
+  font-size: 16px;
+
+  :global {
+    // generate class without id
+    .mx-auto {
+      font-size: 30px;
+
+      :local {
+        .Module {
+          color: blue;
+        }
+      }
+    }
+  }
+
+  .mx-auto {
+    // -> generate class with id
+    font-size: 30px;
+  }
+}

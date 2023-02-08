@@ -1,0 +1,10 @@
+// EX: Text three dots
+@mixin text-ellipsis($number) {
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $number;
+  line-clamp: $number;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
