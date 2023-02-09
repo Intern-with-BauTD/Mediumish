@@ -1,23 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable react/jsx-wrap-multilines */
+import { Fragment, React } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import protectedRoute from './routes';
+import DefaultLayout from './components/Layouts/DefaultLayout';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header mx-auto">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>hehe</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {protectedRoute.map((route, index) => {
+          let Layout = DefaultLayout;
+          if (route.layout) {
+            Layout = route.layout;
+          } else if (route.layout === null) {
+            Layout = Fragment;
+          }
+          const Page = route.component;
+          return (
+            <Route
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
+              path={route.path}
+              element={
+                <Layout>
+                  <Page />
+                </Layout>
+              }
+            />
+          );
+        })}
+      </Routes>
+    </Router>
   );
 }
 
