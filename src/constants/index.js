@@ -1,3 +1,2 @@
-export const LOCATIONS = {
-  HOME: '/',
-};
+const LOCATIONS = { HOME: '/' };
+export default LOCATIONS;
