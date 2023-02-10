@@ -5,7 +5,7 @@ function Footer() {
     <div className="footer">
       <p className="pull-left">Copyright &copy; 2017 Your Website Name</p>
       <p className="pull-right">
-        Mediumish Theme by
+        Mediumish Theme by&nbsp;
         <a target="_blank" href="https://www.wowthemes.net" rel="noreferrer">
           WowThemes.net
         </a>

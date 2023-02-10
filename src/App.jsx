@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        {protectedRoute.map((route, index) => {
+        {protectedRoute.map((route) => {
           let Layout = DefaultLayout;
           if (route.layout) {
             Layout = route.layout;
@@ -18,8 +18,7 @@ function App() {
           const Page = route.component;
           return (
             <Route
-              // eslint-disable-next-line react/no-array-index-key
-              key={index}
+              key={route.path}
               path={route.path}
               element={
                 <Layout>
