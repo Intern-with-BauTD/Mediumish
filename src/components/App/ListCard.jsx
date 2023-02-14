@@ -1,23 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import IMG5 from '../../assets/img/demopic/5.jpg';
-import IMG6 from '../../assets/img/demopic/6.jpg';
-import IMG7 from '../../assets/img/demopic/7.jpg';
-import IMG8 from '../../assets/img/demopic/8.jpg';
-import IMG9 from '../../assets/img/demopic/9.jpg';
-import IMG10 from '../../assets/img/demopic/10.jpg';
-import IconUse from '../../assets/svg/IconUse';
+// eslint-disable-next-line object-curly-newline
+import { IMG5, IMG6, IMG7, IMG8, IMG9, IMG10 } from '../../assets/img';
+import { ReactComponent as IconUse } from '../../assets/svg/IconUse.svg';
+import { LOCATIONS } from '../../constants/index';
 
 function ListCard() {
   return (
     <>
       <div className="card">
-        <Link to="/post">
+        <Link to={LOCATIONS.POST}>
           <img className="img-fluid" src={IMG5} alt="" />
         </Link>
         <div className="card-block">
           <h2 className="card-title">
-            <Link to="/post">
+            <Link to={LOCATIONS.POST}>
               Autumn doesn&apos;t have to be nostalgic, you know?
             </Link>
           </h2>
@@ -28,7 +25,7 @@ function ListCard() {
           <div className="metafooter">
             <div className="wrapfooter">
               <span className="meta-footer-thumb">
-                <Link to="author">
+                <Link to={LOCATIONS.AUTHOR}>
                   <img
                     className="author-thumb"
                     src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x"
@@ -38,7 +35,7 @@ function ListCard() {
               </span>
               <span className="author-meta">
                 <span className="/post-name">
-                  <Link to="author">Sal</Link>
+                  <Link to={LOCATIONS.AUTHOR}>Sal</Link>
                 </span>
                 <br />
                 <span className="/post-date">22 July 2017</span>
@@ -46,8 +43,8 @@ function ListCard() {
                 <span className="/post-read">6 min read</span>
               </span>
               <span className="/post-read-more">
-                <Link to="/post" title="Read Story">
-                  {IconUse}
+                <Link to={LOCATIONS.POST} title="Read <IconUse />">
+                  <IconUse />
                 </Link>
               </span>
             </div>
@@ -56,12 +53,14 @@ function ListCard() {
       </div>
 
       <div className="card">
-        <Link to="/post">
+        <Link to={LOCATIONS.POST}>
           <img className="img-fluid" src={IMG6} alt="" />
         </Link>
         <div className="card-block">
           <h2 className="card-title">
-            <Link to="/post">Best galleries in the world with photos</Link>
+            <Link to={LOCATIONS.POST}>
+              Best galleries in the world with photos
+            </Link>
           </h2>
           <h4 className="card-text">
             This is a longer card with supporting text below as a natural
@@ -70,7 +69,7 @@ function ListCard() {
           <div className="metafooter">
             <div className="wrapfooter">
               <span className="meta-footer-thumb">
-                <Link to="author">
+                <Link to={LOCATIONS.AUTHOR}>
                   <img
                     className="author-thumb"
                     src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x"
@@ -80,7 +79,7 @@ function ListCard() {
               </span>
               <span className="author-meta">
                 <span className="/post-name">
-                  <Link to="author">Sal</Link>
+                  <Link to={LOCATIONS.AUTHOR}>Sal</Link>
                 </span>
                 <br />
                 <span className="/post-date">22 July 2017</span>
@@ -88,8 +87,8 @@ function ListCard() {
                 <span className="/post-read">6 min read</span>
               </span>
               <span className="/post-read-more">
-                <Link to="/post" title="Read Story">
-                  {IconUse}
+                <Link to={LOCATIONS.POST} title="Read <IconUse />">
+                  <IconUse />
                 </Link>
               </span>
             </div>
@@ -98,12 +97,14 @@ function ListCard() {
       </div>
 
       <div className="card">
-        <Link to="/post">
+        <Link to={LOCATIONS.POST}>
           <img className="img-fluid" src={IMG7} alt="" />
         </Link>
         <div className="card-block">
           <h2 className="card-title">
-            <Link to="/post">Little red dress and a perfect summer</Link>
+            <Link to={LOCATIONS.POST}>
+              Little red dress and a perfect summer
+            </Link>
           </h2>
           <h4 className="card-text">
             This is a longer card with supporting text below as a natural
@@ -112,7 +113,7 @@ function ListCard() {
           <div className="metafooter">
             <div className="wrapfooter">
               <span className="meta-footer-thumb">
-                <Link to="author">
+                <Link to={LOCATIONS.AUTHOR}>
                   <img
                     className="author-thumb"
                     src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x"
@@ -122,7 +123,7 @@ function ListCard() {
               </span>
               <span className="author-meta">
                 <span className="/post-name">
-                  <Link to="author">Sal</Link>
+                  <Link to={LOCATIONS.AUTHOR}>Sal</Link>
                 </span>
                 <br />
                 <span className="/post-date">22 July 2017</span>
@@ -130,8 +131,8 @@ function ListCard() {
                 <span className="/post-read">6 min read</span>
               </span>
               <span className="/post-read-more">
-                <Link to="/post" title="Read Story">
-                  {IconUse}
+                <Link to={LOCATIONS.POST} title="Read <IconUse />">
+                  <IconUse />
                 </Link>
               </span>
             </div>
@@ -140,12 +141,12 @@ function ListCard() {
       </div>
 
       <div className="card">
-        <Link to="/post">
+        <Link to={LOCATIONS.POST}>
           <img className="img-fluid" src={IMG8} alt="" />
         </Link>
         <div className="card-block">
           <h2 className="card-title">
-            <Link to="/post">
+            <Link to={LOCATIONS.POST}>
               Thinking outside the box can help you prosper
             </Link>
           </h2>
@@ -156,7 +157,7 @@ function ListCard() {
           <div className="metafooter">
             <div className="wrapfooter">
               <span className="meta-footer-thumb">
-                <Link to="author">
+                <Link to={LOCATIONS.AUTHOR}>
                   <img
                     className="author-thumb"
                     src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x"
@@ -166,7 +167,7 @@ function ListCard() {
               </span>
               <span className="author-meta">
                 <span className="/post-name">
-                  <Link to="author">Sal</Link>
+                  <Link to={LOCATIONS.AUTHOR}>Sal</Link>
                 </span>
                 <br />
                 <span className="/post-date">22 July 2017</span>
@@ -174,8 +175,8 @@ function ListCard() {
                 <span className="/post-read">6 min read</span>
               </span>
               <span className="/post-read-more">
-                <Link to="/post" title="Read Story">
-                  {IconUse}
+                <Link to={LOCATIONS.POST} title="Read <IconUse />">
+                  <IconUse />
                 </Link>
               </span>
             </div>
@@ -184,12 +185,12 @@ function ListCard() {
       </div>
 
       <div className="card">
-        <Link to="/post">
+        <Link to={LOCATIONS.POST}>
           <img className="img-fluid" src={IMG9} alt="" />
         </Link>
         <div className="card-block">
           <h2 className="card-title">
-            <Link to="/post">
+            <Link to={LOCATIONS.POST}>
               10 Things you should know about choosing your house
             </Link>
           </h2>
@@ -200,7 +201,7 @@ function ListCard() {
           <div className="metafooter">
             <div className="wrapfooter">
               <span className="meta-footer-thumb">
-                <Link to="author">
+                <Link to={LOCATIONS.AUTHOR}>
                   <img
                     className="author-thumb"
                     src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x"
@@ -210,7 +211,7 @@ function ListCard() {
               </span>
               <span className="author-meta">
                 <span className="/post-name">
-                  <Link to="author">Sal</Link>
+                  <Link to={LOCATIONS.AUTHOR}>Sal</Link>
                 </span>
                 <br />
                 <span className="/post-date">22 July 2017</span>
@@ -218,8 +219,8 @@ function ListCard() {
                 <span className="/post-read">6 min read</span>
               </span>
               <span className="/post-read-more">
-                <Link to="/post" title="Read Story">
-                  {IconUse}
+                <Link to={LOCATIONS.POST} title="Read <IconUse />">
+                  <IconUse />
                 </Link>
               </span>
             </div>
@@ -228,12 +229,14 @@ function ListCard() {
       </div>
 
       <div className="card">
-        <Link to="/post">
+        <Link to={LOCATIONS.POST}>
           <img className="img-fluid" src={IMG10} alt="" />
         </Link>
         <div className="card-block">
           <h2 className="card-title">
-            <Link to="/post">Visiting the world means learning cultures</Link>
+            <Link to={LOCATIONS.POST}>
+              Visiting the world means learning cultures
+            </Link>
           </h2>
           <h4 className="card-text">
             This is a longer card with supporting text below as a natural
@@ -242,7 +245,7 @@ function ListCard() {
           <div className="metafooter">
             <div className="wrapfooter">
               <span className="meta-footer-thumb">
-                <Link to="author">
+                <Link to={LOCATIONS.AUTHOR}>
                   <img
                     className="author-thumb"
                     src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x"
@@ -252,7 +255,7 @@ function ListCard() {
               </span>
               <span className="author-meta">
                 <span className="/post-name">
-                  <Link to="author">Sal</Link>
+                  <Link to={LOCATIONS.AUTHOR}>Sal</Link>
                 </span>
                 <br />
                 <span className="/post-date">22 July 2017</span>
@@ -260,8 +263,8 @@ function ListCard() {
                 <span className="/post-read">6 min read</span>
               </span>
               <span className="/post-read-more">
-                <Link to="/post" title="Read Story">
-                  {IconUse}
+                <Link to={LOCATIONS.POST} title="Read <IconUse />">
+                  <IconUse />
                 </Link>
               </span>
             </div>

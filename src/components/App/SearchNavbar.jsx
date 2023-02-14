@@ -1,5 +1,5 @@
 import React from 'react';
-import IconUse from '../../assets/svg/IconUse';
+import { ReactComponent as Search } from '../../assets/svg/Search.svg';
 
 function SearchNavbar() {
   return (
@@ -9,7 +9,9 @@ function SearchNavbar() {
         type="text"
         placeholder="Search"
       />
-      <span className="search-icon">{IconUse}</span>
+      <span className="search-icon">
+        <Search />
+      </span>
     </form>
   );
 }

@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import IMG1 from '../../assets/img/demopic/1.jpg';
-import IMG2 from '../../assets/img/demopic/2.jpg';
-import IMG3 from '../../assets/img/demopic/3.jpg';
-import IMG4 from '../../assets/img/demopic/4.jpg';
-import IconUse from '../../assets/svg/IconUse';
+// eslint-disable-next-line object-curly-newline
+import { IMG1, IMG2, IMG3, IMG4 } from '../../assets/img';
+import { ReactComponent as IconUse } from '../../assets/svg/IconUse.svg';
+import { LOCATIONS } from '../../constants/index';
 
 function FeaturedCard() {
   return (
@@ -12,7 +11,7 @@ function FeaturedCard() {
       <div className="card">
         <div className="row">
           <div className="col-md-5 wrapthumbnail">
-            <Link to="/post">
+            <Link to={LOCATIONS.POST}>
               <div
                 className="thumbnail"
                 style={{ backgroundImage: `url(${IMG1})` }}
@@ -22,7 +21,9 @@ function FeaturedCard() {
           <div className="col-md-7">
             <div className="card-block">
               <h2 className="card-title">
-                <Link to="/post">We are living some strange times</Link>
+                <Link to={LOCATIONS.POST}>
+                  We are living some strange times
+                </Link>
               </h2>
               <h4 className="card-text">
                 This is a longer card with supporting text below as a natural
@@ -32,7 +33,7 @@ function FeaturedCard() {
               <div className="metafooter">
                 <div className="wrapfooter">
                   <span className="meta-footer-thumb">
-                    <Link to="/author">
+                    <Link to={LOCATIONS.AUTHOR}>
                       <img
                         className="author-thumb"
                         src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x"
@@ -42,7 +43,7 @@ function FeaturedCard() {
                   </span>
                   <span className="author-meta">
                     <span className="post-name">
-                      <Link to="/author">Steve</Link>
+                      <Link to={LOCATIONS.AUTHOR}>Steve</Link>
                     </span>
                     <br />
                     <span className="post-date">22 July 2017</span>
@@ -50,8 +51,8 @@ function FeaturedCard() {
                     <span className="post-read">6 min read</span>
                   </span>
                   <span className="post-read-more">
-                    <Link to="/post" title="Read Story">
-                      {IconUse}
+                    <Link to={LOCATIONS.POST} title="Read Story">
+                      <IconUse />
                     </Link>
                   </span>
                 </div>
@@ -63,7 +64,7 @@ function FeaturedCard() {
       <div className="card">
         <div className="row">
           <div className="col-md-5 wrapthumbnail">
-            <Link to="/post">
+            <Link to={LOCATIONS.POST}>
               <div
                 className="thumbnail"
                 style={{ backgroundImage: `url(${IMG2})` }}
@@ -73,7 +74,7 @@ function FeaturedCard() {
           <div className="col-md-7">
             <div className="card-block">
               <h2 className="card-title">
-                <Link to="/post">
+                <Link to={LOCATIONS.POST}>
                   The beauty of this world is in your heart
                 </Link>
               </h2>
@@ -85,7 +86,7 @@ function FeaturedCard() {
               <div className="metafooter">
                 <div className="wrapfooter">
                   <span className="meta-footer-thumb">
-                    <Link to="/author">
+                    <Link to={LOCATIONS.AUTHOR}>
                       <img
                         className="author-thumb"
                         src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x"
@@ -95,7 +96,7 @@ function FeaturedCard() {
                   </span>
                   <span className="author-meta">
                     <span className="post-name">
-                      <Link to="/author">Jane</Link>
+                      <Link to={LOCATIONS.AUTHOR}>Jane</Link>
                     </span>
                     <br />
                     <span className="post-date">22 July 2017</span>
@@ -103,8 +104,8 @@ function FeaturedCard() {
                     <span className="post-read">6 min read</span>
                   </span>
                   <span className="post-read-more">
-                    <Link to="/post" title="Read Story">
-                      {IconUse}
+                    <Link to={LOCATIONS.POST} title="Read Story">
+                      <IconUse />
                     </Link>
                   </span>
                 </div>
@@ -126,7 +127,7 @@ function FeaturedCard() {
           <div className="col-md-7">
             <div className="card-block">
               <h2 className="card-title">
-                <Link to="/post">Dreaming of Las Vegas Crazyness</Link>
+                <Link to={LOCATIONS.POST}>Dreaming of Las Vegas Crazyness</Link>
               </h2>
               <h4 className="card-text">
                 This is a longer card with supporting text below as a natural
@@ -136,7 +137,7 @@ function FeaturedCard() {
               <div className="metafooter">
                 <div className="wrapfooter">
                   <span className="meta-footer-thumb">
-                    <Link to="/author">
+                    <Link to={LOCATIONS.AUTHOR}>
                       <img
                         className="author-thumb"
                         src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x"
@@ -146,7 +147,7 @@ function FeaturedCard() {
                   </span>
                   <span className="author-meta">
                     <span className="post-name">
-                      <Link to="/author">Mary</Link>
+                      <Link to={LOCATIONS.AUTHOR}>Mary</Link>
                     </span>
                     <br />
                     <span className="post-date">22 July 2017</span>
@@ -154,8 +155,8 @@ function FeaturedCard() {
                     <span className="post-read">6 min read</span>
                   </span>
                   <span className="post-read-more">
-                    <Link to="/post" title="Read Story">
-                      {IconUse}
+                    <Link to={LOCATIONS.POST} title="Read Story">
+                      <IconUse />
                     </Link>
                   </span>
                 </div>
@@ -167,7 +168,7 @@ function FeaturedCard() {
       <div className="card">
         <div className="row">
           <div className="col-md-5 wrapthumbnail">
-            <Link to="/post">
+            <Link to={LOCATIONS.POST}>
               <div
                 className="thumbnail"
                 style={{ backgroundImage: `url(${IMG4})` }}
@@ -177,7 +178,7 @@ function FeaturedCard() {
           <div className="col-md-7">
             <div className="card-block">
               <h2 className="card-title">
-                <Link to="/post">
+                <Link to={LOCATIONS.POST}>
                   San Francisco at its best view in all seasons
                 </Link>
               </h2>
@@ -189,7 +190,7 @@ function FeaturedCard() {
               <div className="metafooter">
                 <div className="wrapfooter">
                   <span className="meta-footer-thumb">
-                    <Link to="/author">
+                    <Link to={LOCATIONS.AUTHOR}>
                       <img
                         className="author-thumb"
                         src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x"
@@ -199,7 +200,7 @@ function FeaturedCard() {
                   </span>
                   <span className="author-meta">
                     <span className="post-name">
-                      <Link to="/author">Sal</Link>
+                      <Link to={LOCATIONS.AUTHOR}>Sal</Link>
                     </span>
                     <br />
                     <span className="post-date">22 July 2017</span>
@@ -207,8 +208,8 @@ function FeaturedCard() {
                     <span className="post-read">6 min read</span>
                   </span>
                   <span className="post-read-more">
-                    <Link to="/post" title="Read Story">
-                      {IconUse}
+                    <Link to={LOCATIONS.POST} title="Read Story">
+                      <IconUse />
                     </Link>
                   </span>
                 </div>

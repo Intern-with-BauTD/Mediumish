@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { LOCATIONS } from '../../constants';
 
 function HeadingPost() {
   return (
@@ -18,7 +19,7 @@ function HeadingPost() {
           <a className="link-dark" href="author.html">
             Sal
           </a>
-          <Link to="/post" className="btn follow">
+          <Link to={LOCATIONS.POST} className="btn follow">
             Follow
           </Link>
           <span className="author-description">

@@ -4,18 +4,16 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
     'airbnb',
   ],
-  overrides: [
-  ],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
-  rules: {
-  },
+  plugins: ['react'],
+  rules: {},
 };

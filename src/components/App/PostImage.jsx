@@ -1,5 +1,5 @@
 import React from 'react';
-import IMG10 from '../../assets/img/demopic/10.jpg';
+import { IMG10 } from '../../assets/img';
 
 function PostImage() {
   return <img className="featured-image img-fluid" src={IMG10} alt="" />;

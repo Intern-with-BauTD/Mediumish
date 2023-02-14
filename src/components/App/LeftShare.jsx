@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import IconUse from '../../assets/svg/IconUse';
+import { ReactComponent as IconUse } from '../../assets/svg/IconUse.svg';
 
 function LeftShare() {
   return (
@@ -14,7 +14,7 @@ function LeftShare() {
               to="https://twitter.com/home?status=http%3A//www.wowthemes.net"
               rel="noreferrer"
             >
-              {IconUse}
+              <IconUse />
             </Link>
           </li>
           <li>
@@ -23,7 +23,7 @@ function LeftShare() {
               to="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.wowthemes.net"
               rel="noreferrer"
             >
-              {IconUse}
+              <IconUse />
             </Link>
           </li>
         </ul>
@@ -34,7 +34,7 @@ function LeftShare() {
             <a href="#comments">
               42
               <br />
-              {IconUse}
+              <IconUse />
             </a>
           </li>
         </ul>
