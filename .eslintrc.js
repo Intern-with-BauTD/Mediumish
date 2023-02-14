@@ -15,5 +15,10 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react'],
-  rules: {},
+  rules: {
+    'import/no-unresolved': 0, // absolute path react
+    'default-param-last': 0,
+    'no-underscore-dangle': 0,
+    camelcase: 0,
+  },
 };
